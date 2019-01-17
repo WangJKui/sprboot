@@ -47,13 +47,11 @@
 					<#list list?sort_by("sort") as menu>
 						<#if menu_index==0>
 							<li class="layui-nav-item layui-this" data-menu="${menu.type}">
-								<a href="javascript:;"><i class="layui-icon" data-icon="${menu.icon}">${menu.icon}</i><cite>${menu.title}</cite></a>
-							</li>
 						 <#else>
 							 <li class="layui-nav-item" data-menu="${menu.type}" pc>
+						 </#if>
 								<a href="javascript:;"><i class="layui-icon" data-icon="${menu.icon}">${menu.icon}</i><cite>${menu.title}</cite></a>
-							 </li>
-						</#if>
+						     </li>
 					</#list>
 				
 				</ul>

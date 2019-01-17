@@ -99,6 +99,9 @@ public class IndexController {
 	@RequestMapping("/navs")
 	public List<Menu> navs(String type) {
 
+		if(null == type || "".equals(type)) {
+			type = "contentManagement";
+		}
 		List<Menu> list = new ArrayList<>();
 		switch (type) {
 		case "contentManagement":
