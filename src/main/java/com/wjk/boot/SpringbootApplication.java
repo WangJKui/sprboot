@@ -27,5 +27,22 @@ public class SpringbootApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootApplication.class, args);
 	}
+	
+	/**
+	 * 
+	 * @Title: servletRegistrationBean   
+	 * @Description: 设置匹配*.action后缀请求  
+	 * @param: @param dispatcherServlet
+	 * @param: @return      
+	 * @return: ServletRegistrationBean      
+	 * @throws
+	 */
+	/*@SuppressWarnings("rawtypes")
+	@Bean
+    public ServletRegistrationBean servletRegistrationBean(DispatcherServlet dispatcherServlet) {
+        ServletRegistrationBean<DispatcherServlet> servletServletRegistrationBean = new ServletRegistrationBean<>(dispatcherServlet);
+        servletServletRegistrationBean.addUrlMappings("*.do");
+        return servletServletRegistrationBean;
+    }*/
 
 }

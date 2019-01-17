@@ -22,9 +22,11 @@ public class SprWebMvcConfigurerAdapter implements WebMvcConfigurer{
 	}
 
 	 /**
-     * 添加静态资源文件，外部可以直接访问地址
-     * @param registry
-     */
+	  * 添加静态资源文件，外部可以直接访问地址
+	  * <p>Title: addResourceHandlers</p>   
+	  * <p>Description: </p>   
+	  * @param registry   
+	  */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
@@ -33,4 +35,15 @@ public class SprWebMvcConfigurerAdapter implements WebMvcConfigurer{
         registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
     }
 	
+    /**
+     * 开启路径后缀匹配
+     * <p>Title: configurePathMatch</p>   
+     * <p>Description: </p>   
+     * @param configurer   
+     */
+   /* @Override
+    public void configurePathMatch(PathMatchConfigurer configurer) {
+        configurer.setUseRegisteredSuffixPatternMatch(true);
+    }*/
+    
 }

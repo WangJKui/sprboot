@@ -11,7 +11,14 @@ import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-
+/**
+ * 
+ * @ClassName:  SprInterceptor   
+ * @Description:TODO(这里用一句话描述这个类的作用)   
+ * @author: WangJKui
+ * @date:   2019年1月16日 下午3:34:38   
+ *     
+ */
 @Component
 public class SprInterceptor implements HandlerInterceptor{
 	
@@ -22,9 +29,6 @@ public class SprInterceptor implements HandlerInterceptor{
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
 		logger.debug(((HandlerMethod)handler).getBean().getClass().getName());
-		
-		request.setAttribute("startTime", System.currentTimeMillis());
-		
 		logger.debug("getRequestURL："+request.getRequestURL());
 		logger.debug("getServerName："+request.getServerName());
 		logger.debug("getServerPort："+request.getServerPort());
@@ -32,6 +36,7 @@ public class SprInterceptor implements HandlerInterceptor{
 		logger.debug("getServletPath："+request.getServletPath());
 		logger.debug("getQueryString："+request.getQueryString());
 
+		request.setAttribute("startTime", System.currentTimeMillis());
 		return true;
 	}
 

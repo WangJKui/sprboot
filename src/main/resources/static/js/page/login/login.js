@@ -10,13 +10,13 @@ layui.use(['form','layer','jquery'],function(){
     })
 
     //登录按钮
-    form.on("submit(login)",function(data){
+   /* form.on("submit(login)",function(data){
         $(this).text("登录中...").attr("disabled","disabled").addClass("layui-disabled");
-        setTimeout(function(){
-            window.location.href = "/layuicms2.0";
-        },1000);
-        return false;
-    })
+        
+        layer.msg(JSON.stringify(data.field));
+       
+        //return false;//阻止表单跳转。如果需要表单跳转，去掉这段即可。
+    })*/
 
     //表单输入效果
     $(".loginBody .input-item").click(function(e){

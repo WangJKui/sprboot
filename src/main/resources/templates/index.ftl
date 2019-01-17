@@ -43,18 +43,19 @@
 					</li>
 				</ul>
 				<ul class="layui-nav topLevelMenus" pc>
-					<li class="layui-nav-item layui-this" data-menu="contentManagement">
-						<a href="javascript:;"><i class="layui-icon" data-icon="&#xe63c;">&#xe63c;</i><cite>内容管理</cite></a>
-					</li>
-					<li class="layui-nav-item" data-menu="memberCenter" pc>
-						<a href="javascript:;"><i class="seraph icon-icon10" data-icon="icon-icon10"></i><cite>用户中心</cite></a>
-					</li>
-					<li class="layui-nav-item" data-menu="systemeSttings" pc>
-						<a href="javascript:;"><i class="layui-icon" data-icon="&#xe620;">&#xe620;</i><cite>系统设置</cite></a>
-					</li>
-					<li class="layui-nav-item" data-menu="seraphApi" pc>
-						<a href="javascript:;"><i class="layui-icon" data-icon="&#xe705;">&#xe705;</i><cite>使用文档</cite></a>
-					</li>
+
+					<#list list?sort_by("sort") as menu>
+						<#if menu_index==0>
+							<li class="layui-nav-item layui-this" data-menu="${menu.type}">
+								<a href="javascript:;"><i class="layui-icon" data-icon="${menu.icon}">${menu.icon}</i><cite>${menu.title}</cite></a>
+							</li>
+						 <#else>
+							 <li class="layui-nav-item" data-menu="${menu.type}" pc>
+								<a href="javascript:;"><i class="layui-icon" data-icon="${menu.icon}">${menu.icon}</i><cite>${menu.title}</cite></a>
+							 </li>
+						</#if>
+					</#list>
+				
 				</ul>
 			    <!-- 顶部右侧菜单 -->
 			    <ul class="layui-nav top_menu">
@@ -72,7 +73,7 @@
 							<dd><a href="javascript:;" class="showNotice"><i class="layui-icon">&#xe645;</i><cite>系统公告</cite><span class="layui-badge-dot"></span></a></dd>
 							<dd pc><a href="javascript:;" class="functionSetting"><i class="layui-icon">&#xe620;</i><cite>功能设定</cite><span class="layui-badge-dot"></span></a></dd>
 							<dd pc><a href="javascript:;" class="changeSkin"><i class="layui-icon">&#xe61b;</i><cite>更换皮肤</cite></a></dd>
-							<dd><a href="${request.contextPath}/user/login" class="signOut"><i class="seraph icon-tuichu"></i><cite>退出</cite></a></dd>
+							<dd><a href="${request.contextPath}/login/logout" class="signOut"><i class="seraph icon-tuichu"></i><cite>退出</cite></a></dd>
 						</dl>
 					</li>
 				</ul>
