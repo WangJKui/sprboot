@@ -28,7 +28,6 @@ public class ShiroConfig {
 	 * @Description: 注入自定义的realm，告诉shiro如何获取用户信息来做登录认证和授权
 	 * @param: @return      
 	 * @return: Realm      
-	 * @throws
 	 */
 	@Bean
 	public Realm realm() {

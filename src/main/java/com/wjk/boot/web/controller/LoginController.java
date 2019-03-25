@@ -29,11 +29,9 @@ public class LoginController {
 	private static Logger logger = LoggerFactory.getLogger(LoginController.class); 
 
 	/**
-	 * @Title: tologinPage   
-	 * @Description: 登录页  
-	 * @param: @return      
-	 * @return: String      
-	 * @throws
+	 * @Title tologinPage   
+	 * @Description 登录页  
+	 * @return String      
 	 */
 	@RequestMapping("/tologin")
 	public String tologinPage() {
@@ -42,11 +40,9 @@ public class LoginController {
 
 
 	/**
-	 * @Title: login   
-	 * @Description: 登录操作 
-	 * @param: @return      
-	 * @return: String      
-	 * @throws
+	 * @Title login   
+	 * @Description 登录操作 
+	 * @return String      
 	 */
 	@RequestMapping(value = "/login",method = RequestMethod.POST)
 	public String login(User user,String code) {
@@ -76,11 +72,9 @@ public class LoginController {
 	
 	/**
 	 * 
-	 * @Title: logout   
-	 * @Description: 登出
-	 * @param: @return      
-	 * @return: String      
-	 * @throws
+	 * @Title logout   
+	 * @Description 登出
+	 * @return String      
 	 */
 	@RequestMapping("/logout")
 	public String logout() {

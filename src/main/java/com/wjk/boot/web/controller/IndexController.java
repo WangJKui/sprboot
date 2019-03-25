@@ -34,7 +34,6 @@ public class IndexController {
 	 *				 获取一级菜单
 	 * @param: @return      
 	 * @return: String      
-	 * @throws
 	 */
 	@RequestMapping("/index")
 	public String index(ModelMap map) {

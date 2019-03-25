@@ -21,11 +21,9 @@ public class UserController {
 
 	/**
 	 * 
-	 * @Title: info   
-	 * @Description: 个人资料 
-	 * @param: @return      
-	 * @return: String      
-	 * @throws
+	 * @Title info   
+	 * @Description 个人资料 
+	 * @return String      
 	 */
 	@RequestMapping("/info")
 	public String info() {
@@ -35,11 +33,9 @@ public class UserController {
 	
 	/**
 	 * 
-	 * @Title: changePwd   
-	 * @Description: 修改密码  
-	 * @param: @return      
-	 * @return: String      
-	 * @throws
+	 * @Title changePwd   
+	 * @Description 修改密码  
+	 * @return String      
 	 */
 	@RequestMapping("/changePwd")
 	public String changePwd() {
@@ -49,11 +45,9 @@ public class UserController {
 	
 	/**
 	 * 
-	 * @Title: pageMain   
-	 * @Description: 后台首页 
-	 * @param: @return      
-	 * @return: String      
-	 * @throws
+	 * @Title pageMain   
+	 * @Description 后台首页 
+	 * @return String      
 	 */
 	@RequestMapping("/page/main")
 	public String pageMain() {
